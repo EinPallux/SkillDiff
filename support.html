@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoL Support Companion - Best Synergies</title>
+    <link rel="icon" type="image/png" href="https://wiki.leagueoflegends.com/en-us/images/Every.png?9d53e">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Beaufort+for+LOL:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['"Beaufort for LOL"', 'Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        lol: {
+                            dark: '#091428',
+                            darker: '#0a0a0c',
+                            gold: '#C8AA6E',
+                            goldHover: '#F0E6D2',
+                            blue: '#0AC8B9',
+                            blueDim: '#0397AB',
+                            hextech: '#1c2333'
+                        },
+                        tier: {
+                            s: '#ff4e50',
+                            a: '#fc913a',
+                            b: '#f9d423',
+                            c: '#ede574',
+                            d: '#e1f5c4'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-panel {
+            background: rgba(30, 35, 40, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(200, 170, 110, 0.15);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 0.5s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Hide scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #091428; }
+        ::-webkit-scrollbar-thumb { background: #C8AA6E; border-radius: 4px; }
+    </style>
+</head>
+<body class="bg-lol-darker text-slate-200 min-h-screen flex flex-col font-sans bg-[url('https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-static-assets/global/default/images/clash-assets/backgrounds/clash-background-default.jpg')] bg-cover bg-fixed bg-center">
+    
+    <div class="fixed inset-0 bg-lol-darker/90 z-[-1]"></div>
+
+    <nav class="sticky top-0 z-50 border-b border-lol-gold/20 glass-panel">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center gap-8">
+                    <a href="index.html" class="flex items-center gap-2 font-bold text-xl text-lol-gold tracking-wider hover:text-lol-goldHover transition-colors">
+                        <img src="https://wiki.leagueoflegends.com/en-us/images/Every.png?9d53e" class="w-8 h-8" alt="Logo">
+                        LeagueComps
+                    </a>
+                    <div class="hidden md:flex items-baseline space-x-4">
+                        <a href="toplane.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-300 hover:text-lol-gold hover:bg-white/5 transition-all flex items-center gap-2">
+                            <img src="icons/roles/Top_icon.png" class="w-4 h-4 opacity-80" alt="Top"> Top
+                        </a>
+                        <a href="midlane.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-300 hover:text-lol-gold hover:bg-white/5 transition-all flex items-center gap-2">
+                            <img src="icons/roles/Middle_icon.png" class="w-4 h-4 opacity-80" alt="Mid"> Mid
+                        </a>
+                        <a href="support.html" class="px-3 py-2 rounded-md text-sm font-bold text-lol-gold bg-white/10 border border-lol-gold/30 flex items-center gap-2">
+                            <img src="icons/roles/Support_icon.png" class="w-4 h-4" alt="Support"> Support
+                        </a>
+                        <span class="text-slate-600 mx-2">|</span>
+                        <a href="runes.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-300 hover:text-lol-gold hover:bg-white/5 transition-all flex items-center gap-2">
+                            <img src="icons/runes/Conqueror.png" class="w-4 h-4 rounded-full" alt="Runes"> Runes
+                        </a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-lol-gold hover:text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow container max-w-7xl mx-auto px-4 py-8 space-y-8">
+        
+        <header class="text-center space-y-4 relative py-10 rounded-2xl glass-panel overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-lol-gold to-transparent opacity-50"></div>
+            
+            <div class="absolute top-4 left-4 flex items-center gap-2 px-3 py-1 rounded-full bg-lol-dark/80 border border-lol-blue/30 text-lol-blue text-xs font-bold uppercase tracking-widest shadow-lg">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                <span>Patch 25.22</span>
+            </div>
+
+            <div class="relative z-10">
+                <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-lol-gold to-yellow-900 rounded-full p-0.5 shadow-lg shadow-lol-gold/20">
+                    <div class="w-full h-full bg-lol-darker rounded-full flex items-center justify-center">
+                        <img src="icons/roles/Support_icon.png" alt="Support" class="w-8 h-8 opacity-90">
+                    </div>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-b from-lol-gold to-yellow-700 drop-shadow-sm">
+                    Support Companion
+                </h1>
+                <p class="text-slate-400 text-lg max-w-xl mx-auto mt-2">
+                    Select your ADC partner to see the best synergy picks and playstyles.
+                </p>
+            </div>
+            
+            <div class="absolute -top-20 -right-20 w-64 h-64 bg-green-500/10 rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-20 -left-20 w-64 h-64 bg-lol-gold/10 rounded-full blur-3xl"></div>
+        </header>
+
+        <section id="selectionSection" class="glass-panel rounded-2xl p-6 md:p-8 transition-all duration-500 animate-fade-in">
+            
+            <div class="relative max-w-2xl mx-auto mb-8 group">
+                <div class="absolute -inset-0.5 bg-gradient-to-r from-lol-gold/50 to-green-500/50 rounded-lg blur opacity-30 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+                <div class="relative flex items-center bg-lol-darker rounded-lg border border-slate-700 focus-within:border-lol-gold transition-colors">
+                    <div class="pl-4 text-slate-500">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                    </div>
+                    <input type="text" id="championSearch" placeholder="Search your ADC..." 
+                        class="w-full bg-transparent border-none text-slate-200 placeholder-slate-500 focus:ring-0 py-3 px-4 leading-tight">
+                </div>
+            </div>
+
+            <div id="championGrid" class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-4">
+                </div>
+        </section>
+
+        <section id="resultsSection" class="hidden space-y-6">
+            
+            <div class="glass-panel rounded-xl p-6 border-l-4 border-l-lol-gold relative overflow-hidden">
+                <div class="absolute right-0 top-0 h-full w-1/2 bg-gradient-to-l from-lol-gold/5 to-transparent"></div>
+                <div class="relative z-10">
+                    <div class="flex items-center gap-4 mb-2">
+                        <h2 class="text-2xl font-display text-lol-gold">
+                            Recommended Supports for <span id="selectedChampionName" class="text-white"></span>
+                        </h2>
+                        <span class="px-2 py-0.5 bg-lol-darker border border-slate-700 rounded text-xs text-slate-400 uppercase tracking-wider flex items-center gap-1">
+                            <svg class="w-3 h-3 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.476.859h4.002z"/></svg>
+                            Best Archetype
+                        </span>
+                    </div>
+                    <p id="strategyText" class="text-slate-300 leading-relaxed text-lg"></p>
+                </div>
+            </div>
+
+            <div id="tierContainer" class="space-y-6">
+                </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-slate-800 bg-lol-darker py-8 mt-12">
+        <div class="container mx-auto px-4 text-center text-slate-500 text-sm">
+            <p>&copy; 2025 LeagueComps. Data provided by U.GG & Mobalytics.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/main.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof renderLanePage === 'function') {
+                renderLanePage('support'); // Initialize specifically for Support
+            }
+        });
+    </script>
+</body>
+</html>

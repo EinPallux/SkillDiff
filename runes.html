@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoL Rune Builds - Best Setups for Season 15</title>
+    <link rel="icon" type="image/png" href="https://wiki.leagueoflegends.com/en-us/images/Every.png?9d53e">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Beaufort+for+LOL:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['"Beaufort for LOL"', 'Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        lol: {
+                            dark: '#091428',
+                            darker: '#0a0a0c',
+                            gold: '#C8AA6E',
+                            goldHover: '#F0E6D2',
+                            blue: '#0AC8B9',
+                            blueDim: '#0397AB',
+                            hextech: '#1c2333'
+                        },
+                        rune: {
+                            precision: '#C8AA6E',
+                            domination: '#DC4C64',
+                            sorcery: '#6F7DD8',
+                            resolve: '#A1D586',
+                            inspiration: '#49AAB9'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-panel {
+            background: rgba(30, 35, 40, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(200, 170, 110, 0.15);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 0.5s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Rune Icon Styles */
+        .rune-icon {
+            border-radius: 50%;
+            border: 2px solid rgba(60, 60, 60, 0.5);
+            background: #0a0a0c;
+            transition: all 0.3s ease;
+        }
+        .rune-icon.keystone { width: 64px; height: 64px; border-color: #C8AA6E; }
+        .rune-icon.active { width: 48px; height: 48px; border-color: #5c5c5c; filter: grayscale(0%); }
+        .rune-icon.shard { width: 32px; height: 32px; border-radius: 0; border: none; background: transparent; }
+        
+        /* Hide scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #091428; }
+        ::-webkit-scrollbar-thumb { background: #C8AA6E; border-radius: 4px; }
+    </style>
+</head>
+<body class="bg-lol-darker text-slate-200 min-h-screen flex flex-col font-sans bg-[url('https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-static-assets/global/default/images/clash-assets/backgrounds/clash-background-default.jpg')] bg-cover bg-fixed bg-center">
+    
+    <div class="fixed inset-0 bg-lol-darker/90 z-[-1]"></div>
+
+    <nav class="sticky top-0 z-50 border-b border-lol-gold/20 glass-panel">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center gap-8">
+                    <a href="index.html" class="flex items-center gap-2 font-bold text-xl text-lol-gold tracking-wider hover:text-lol-goldHover transition-colors">
+                        <img src="https://wiki.leagueoflegends.com/en-us/images/Every.png?9d53e" class="w-8 h-8" alt="Logo">
+                        LeagueComps
+                    </a>
+                    <div class="hidden md:flex items-baseline space-x-4">
+                        <a href="toplane.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-300 hover:text-lol-gold hover:bg-white/5 transition-all flex items-center gap-2">
+                            <img src="icons/roles/Top_icon.png" class="w-4 h-4 opacity-80" alt="Top"> Top
+                        </a>
+                        <a href="midlane.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-300 hover:text-lol-gold hover:bg-white/5 transition-all flex items-center gap-2">
+                            <img src="icons/roles/Middle_icon.png" class="w-4 h-4 opacity-80" alt="Mid"> Mid
+                        </a>
+                        <a href="support.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-300 hover:text-lol-gold hover:bg-white/5 transition-all flex items-center gap-2">
+                            <img src="icons/roles/Support_icon.png" class="w-4 h-4 opacity-80" alt="Support"> Support
+                        </a>
+                        <span class="text-slate-600 mx-2">|</span>
+                        <a href="runes.html" class="px-3 py-2 rounded-md text-sm font-bold text-lol-gold bg-white/10 border border-lol-gold/30 flex items-center gap-2">
+                            <img src="icons/runes/Conqueror.png" class="w-4 h-4 rounded-full" alt="Runes"> Runes
+                        </a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-lol-gold hover:text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow container max-w-7xl mx-auto px-4 py-8 space-y-8">
+        
+        <header class="text-center space-y-4 relative py-10 rounded-2xl glass-panel overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-lol-gold to-transparent opacity-50"></div>
+            
+            <div class="absolute top-4 left-4 flex items-center gap-2 px-3 py-1 rounded-full bg-lol-dark/80 border border-lol-blue/30 text-lol-blue text-xs font-bold uppercase tracking-widest shadow-lg">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                <span>Patch 25.22</span>
+            </div>
+
+            <div class="relative z-10">
+                <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-lol-gold to-yellow-900 rounded-full p-0.5 shadow-lg shadow-lol-gold/20">
+                    <div class="w-full h-full bg-lol-darker rounded-full flex items-center justify-center">
+                        <img src="icons/runes/Conqueror.png" alt="Runes" class="w-10 h-10 opacity-90">
+                    </div>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-b from-lol-gold to-yellow-700 drop-shadow-sm">
+                    Rune Recommender
+                </h1>
+                <p class="text-slate-400 text-lg max-w-xl mx-auto mt-2">
+                    Optimize your setup. Find the highest win-rate rune pages for any champion.
+                </p>
+            </div>
+            
+            <div class="absolute -top-20 -right-20 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-20 -left-20 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl"></div>
+        </header>
+
+        <section id="selectionSection" class="glass-panel rounded-2xl p-6 md:p-8 transition-all duration-500 animate-fade-in">
+            
+            <div class="relative max-w-2xl mx-auto mb-8 group">
+                <div class="absolute -inset-0.5 bg-gradient-to-r from-lol-gold/50 to-blue-500/50 rounded-lg blur opacity-30 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+                <div class="relative flex items-center bg-lol-darker rounded-lg border border-slate-700 focus-within:border-lol-gold transition-colors">
+                    <div class="pl-4 text-slate-500">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                    </div>
+                    <input type="text" id="championSearch" placeholder="Search champion for runes..." 
+                        class="w-full bg-transparent border-none text-slate-200 placeholder-slate-500 focus:ring-0 py-3 px-4 leading-tight">
+                </div>
+            </div>
+
+            <div id="championGrid" class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-4">
+                </div>
+        </section>
+
+        <section id="resultsSection" class="hidden space-y-6">
+            <div class="glass-panel rounded-xl p-6 md:p-8 border-t border-lol-gold/20 relative">
+                
+                <h2 class="text-2xl font-display text-lol-gold mb-6 flex items-center gap-3">
+                    <img id="selectedChampIcon" src="" class="w-10 h-10 rounded-full border border-lol-gold" alt="">
+                    <span>Runes for <span id="selectedChampionName" class="text-white"></span></span>
+                </h2>
+
+                <div id="runeBuildsContainer" class="grid grid-cols-1 xl:grid-cols-2 gap-8">
+                    </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-slate-800 bg-lol-darker py-8 mt-12">
+        <div class="container mx-auto px-4 text-center text-slate-500 text-sm">
+            <p>&copy; 2025 LeagueComps. Data provided by U.GG & Mobalytics.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/main.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof renderLanePage === 'function') {
+                renderLanePage('runes');
+            }
+
+            // OVERRIDE: Custom selectChampion logic for Runes Page
+            // We attach this after main.js loads to redefine the behavior for this specific page
+            window.selectChampion = function(champion) {
+                const resultsSection = document.getElementById('resultsSection');
+                const nameSpan = document.getElementById('selectedChampionName');
+                const iconImg = document.getElementById('selectedChampIcon');
+                const container = document.getElementById('runeBuildsContainer');
+                
+                if(nameSpan) nameSpan.textContent = champion.name;
+                if(iconImg) iconImg.src = champion.icon;
+
+                container.innerHTML = ''; // Clear previous
+
+                const runeData = LEAGUE_DATA.runes.builds[champion.name];
+
+                if (runeData && runeData.length > 0) {
+                    runeData.forEach(build => {
+                        const card = createRuneCard(build);
+                        container.appendChild(card);
+                    });
+                } else {
+                    container.innerHTML = `
+                        <div class="col-span-full text-center p-10 text-slate-500 bg-lol-darker/50 rounded-xl border border-slate-800 border-dashed">
+                            No rune data available for ${champion.name} yet.
+                        </div>
+                    `;
+                }
+
+                // Show results with animation
+                resultsSection.classList.remove('hidden');
+                resultsSection.classList.remove('animate-fade-in-up');
+                void resultsSection.offsetWidth; // Trigger reflow
+                resultsSection.classList.add('animate-fade-in-up');
+                
+                setTimeout(() => {
+                    resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
+            };
+        });
+
+        // Helper to create the detailed Rune Card
+        function createRuneCard(build) {
+            const card = document.createElement('div');
+            card.className = 'bg-lol-darker border border-slate-700 rounded-xl overflow-hidden shadow-lg flex flex-col';
+
+            // Header
+            card.innerHTML = `
+                <div class="bg-slate-800/50 p-4 border-b border-slate-700 flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <span class="px-3 py-1 rounded bg-lol-blue/10 text-lol-blue text-xs font-bold uppercase tracking-widest border border-lol-blue/20">
+                            ${build.lane} Lane
+                        </span>
+                    </div>
+                    <div class="flex gap-2">
+                        <img src="icons/runes/${build.primary.keystone}.png" class="w-8 h-8 rounded-full border border-lol-gold/50" title="Keystone">
+                    </div>
+                </div>
+            `;
+
+            // Body
+            const body = document.createElement('div');
+            body.className = 'p-6 grid grid-cols-1 md:grid-cols-3 gap-6 relative';
+            
+            // Primary Tree
+            const primaryHtml = `
+                <div class="flex flex-col items-center space-y-4 relative z-10">
+                    <h4 class="text-lol-gold font-bold text-sm uppercase tracking-wider mb-2">${build.primary.tree}</h4>
+                    <img src="${build.primary.icon}" class="w-16 h-16 rounded-full border-2 border-lol-gold shadow-[0_0_15px_rgba(200,170,110,0.4)] mb-2">
+                    <div class="w-0.5 h-4 bg-slate-700"></div>
+                    ${build.primary.slots.map(rune => `
+                        <div class="group relative">
+                            <img src="icons/runes/${rune.replace(':','-').trim()}.png" class="w-10 h-10 rounded-full border border-slate-600 bg-black transition-transform group-hover:scale-110 group-hover:border-slate-400" title="${rune}">
+                            <span class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-black text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 whitespace-nowrap transition-opacity pointer-events-none">${rune}</span>
+                        </div>
+                    `).join('<div class="w-0.5 h-2 bg-slate-800"></div>')}
+                </div>
+            `;
+
+            // Secondary Tree
+            const secondaryHtml = `
+                <div class="flex flex-col items-center space-y-4 relative z-10 pt-4">
+                    <h4 class="text-slate-400 font-bold text-sm uppercase tracking-wider mb-2">${build.secondary.tree}</h4>
+                    <img src="${build.secondary.icon}" class="w-10 h-10 rounded-full border border-slate-600 opacity-80 grayscale mb-4">
+                    ${build.secondary.slots.map(rune => `
+                         <div class="group relative">
+                            <img src="icons/runes/${rune.replace(':','-').trim()}.png" class="w-9 h-9 rounded-full border border-slate-600 bg-black transition-transform group-hover:scale-110 group-hover:border-slate-400" title="${rune}">
+                             <span class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-black text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 whitespace-nowrap transition-opacity pointer-events-none">${rune}</span>
+                        </div>
+                    `).join('<div class="w-0.5 h-2 bg-slate-800"></div>')}
+                </div>
+            `;
+
+            // Stats / Info
+            const statsHtml = `
+                <div class="flex flex-col justify-between h-full border-l border-slate-800 pl-6">
+                    <div>
+                        <h4 class="text-slate-500 font-bold text-xs uppercase tracking-wider mb-4">Stat Shards</h4>
+                        <div class="flex flex-col gap-3">
+                            ${build.shards.map(shard => `
+                                <div class="flex items-center gap-3">
+                                    <div class="w-6 h-6 rounded bg-slate-800 border border-slate-600 flex items-center justify-center text-[10px] text-slate-400">
+                                        ${getShardIcon(shard)}
+                                    </div>
+                                    <span class="text-sm text-slate-300">${shard}</span>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-6 border-t border-slate-800">
+                        <h4 class="text-lol-gold font-bold text-sm mb-2">Strategy</h4>
+                        <p class="text-sm text-slate-400 leading-relaxed italic">
+                            ${build.explanation}
+                        </p>
+                    </div>
+                </div>
+            `;
+
+            body.innerHTML = primaryHtml + secondaryHtml + statsHtml;
+            card.appendChild(body);
+            return card;
+        }
+
+        // Helper for Shard Icons (Simple representation)
+        function getShardIcon(shard) {
+            if(shard.includes('Adaptive')) return '⚔️';
+            if(shard.includes('Speed')) return '💨';
+            if(shard.includes('Haste')) return '⏳';
+            if(shard.includes('Armor')) return '🛡️';
+            if(shard.includes('Magic')) return '🔮';
+            if(shard.includes('Health')) return '❤️';
+            return '•';
+        }
+    </script>
+</body>
+</html>
