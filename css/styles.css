@@ -1,0 +1,47 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Beaufort:wght@700&display=swap');
+
+/* Custom Scrollbar for a 'Gamer' feel */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #0f172a; 
+}
+::-webkit-scrollbar-thumb {
+    background: #3b82f6; 
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #2563eb; 
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 0.4s ease-in-out forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Glassmorphism utility class */
+.glass-panel {
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Champion Image Hover Zoom */
+.champ-img-container {
+    overflow: hidden;
+}
+.champ-img {
+    transition: transform 0.3s ease;
+}
+.champ-img-container:hover .champ-img {
+    transform: scale(1.1);
+}

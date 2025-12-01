@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillDiff.lol | The Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'lol-gold': '#C8AA6E',
+                        'lol-gold-light': '#F0E6D2',
+                        'lol-blue': '#0AC8B9',
+                        'lol-dark': '#091428',
+                        'lol-dark-sec': '#0A1428',
+                        'lol-grey': '#A09B8C',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Beaufort', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-lol-dark text-gray-100 font-sans min-h-screen">
+
+    <nav class="border-b border-gray-700 bg-lol-dark-sec py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="text-2xl font-bold tracking-tighter text-white">
+                <span class="text-lol-blue">Skill</span>Diff<span class="text-lol-gold">.lol</span>
+            </div>
+            <div class="text-sm text-gray-400">Patch 25.23</div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-6 py-12">
+        
+        <h1 class="text-4xl font-display font-bold text-center mb-2 text-white">Master Your Matchups</h1>
+        <p class="text-center text-gray-400 mb-12">Select your lane to dominate the rift.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+            <a href="support-companion.html" class="group relative overflow-hidden rounded-xl bg-gradient-to-br from-indigo-900 to-slate-900 border border-indigo-500/30 p-8 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-indigo-500/20">
+                <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                    <i class="fa-solid fa-hand-holding-medical text-9xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-lol-blue transition-colors">Support Companion</h3>
+                <p class="text-gray-400 text-sm">Find the perfect synergy for your ADC. Tier lists, rune builds, and playstyle tips.</p>
+                <div class="mt-6 flex items-center text-lol-blue font-semibold text-sm">
+                    Open Tool <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                </div>
+            </a>
+
+            <div class="coming-soon-card relative rounded-xl bg-slate-800/50 border border-gray-700 p-8 grayscale opacity-75 cursor-not-allowed">
+                <div class="absolute top-4 right-4 bg-gray-700 text-xs px-2 py-1 rounded text-white font-bold">SOON</div>
+                <h3 class="text-xl font-bold text-gray-300 mb-2">Toplane Counter</h3>
+                <p class="text-gray-500 text-sm">Matchup data for the island.</p>
+            </div>
+            
+            <div class="coming-soon-card relative rounded-xl bg-slate-800/50 border border-gray-700 p-8 grayscale opacity-75 cursor-not-allowed">
+                <div class="absolute top-4 right-4 bg-gray-700 text-xs px-2 py-1 rounded text-white font-bold">SOON</div>
+                <h3 class="text-xl font-bold text-gray-300 mb-2">Jungle Counter</h3>
+                <p class="text-gray-500 text-sm">Jungle pathing and invade timers.</p>
+            </div>
+
+            <div class="coming-soon-card relative rounded-xl bg-slate-800/50 border border-gray-700 p-8 grayscale opacity-75 cursor-not-allowed">
+                <div class="absolute top-4 right-4 bg-gray-700 text-xs px-2 py-1 rounded text-white font-bold">SOON</div>
+                <h3 class="text-xl font-bold text-gray-300 mb-2">Midlane Counter</h3>
+                <p class="text-gray-500 text-sm">Roam timers and burst thresholds.</p>
+            </div>
+
+            <div class="coming-soon-card relative rounded-xl bg-slate-800/50 border border-gray-700 p-8 grayscale opacity-75 cursor-not-allowed">
+                <div class="absolute top-4 right-4 bg-gray-700 text-xs px-2 py-1 rounded text-white font-bold">SOON</div>
+                <h3 class="text-xl font-bold text-gray-300 mb-2">Botlane 2v2</h3>
+                <p class="text-gray-500 text-sm">Double kill pressure calculations.</p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            <div class="lg:col-span-1 glass-panel rounded-xl p-6">
+                <h2 class="text-xl font-bold text-lol-gold mb-4 flex items-center">
+                    <i class="fa-solid fa-scroll mr-2"></i> Patch 25.23 Highlights
+                </h2>
+                <div id="patch-container" class="space-y-4 max-h-[500px] overflow-y-auto pr-2">
+                    </div>
+            </div>
+
+            <div class="lg:col-span-2 glass-panel rounded-xl p-6">
+                <h2 class="text-xl font-bold text-lol-gold mb-4 flex items-center">
+                    <i class="fa-solid fa-trophy mr-2"></i> God Tier Picks (S+)
+                </h2>
+                
+                <div class="flex space-x-2 mb-6 overflow-x-auto pb-2" id="meta-tabs">
+                    </div>
+
+                <div class="grid grid-cols-5 text-gray-500 text-xs font-bold uppercase tracking-wider mb-2 px-4">
+                    <div class="col-span-2">Champion</div>
+                    <div class="text-center">Win Rate</div>
+                    <div class="text-center">Pick Rate</div>
+                    <div class="text-center">Ban Rate</div>
+                </div>
+                
+                <div id="meta-container" class="space-y-2">
+                    </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-black py-8 mt-20 text-center text-gray-600 text-sm">
+        <p>&copy; 2025 SkillDiff.lol. Not endorsed by Riot Games.</p>
+    </footer>
+
+    <script type="module" src="js/hub.js"></script>
+</body>
+</html>
